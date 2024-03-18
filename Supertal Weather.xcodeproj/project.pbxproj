@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		54B97BE62BA89D9900D4AB2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B97BE52BA89D9900D4AB2E /* AppDelegate.swift */; };
-		54B97BEA2BA89D9900D4AB2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B97BE92BA89D9900D4AB2E /* ViewController.swift */; };
-		54B97BED2BA89D9900D4AB2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B97BEB2BA89D9900D4AB2E /* Main.storyboard */; };
 		54B97BEF2BA89D9A00D4AB2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B97BEE2BA89D9A00D4AB2E /* Assets.xcassets */; };
 		54B97BF22BA89D9A00D4AB2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B97BF02BA89D9A00D4AB2E /* LaunchScreen.storyboard */; };
 		54B97C002BA89F6400D4AB2E /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54B97BFB2BA89F6400D4AB2E /* Roboto-Light.ttf */; };
@@ -19,13 +17,13 @@
 		54B97C042BA89F6400D4AB2E /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 54B97BFF2BA89F6400D4AB2E /* Roboto-Medium.ttf */; };
 		54B97C082BA8B68700D4AB2E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B97C062BA8B68700D4AB2E /* HomeViewController.swift */; };
 		54B97C092BA8B68700D4AB2E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54B97C072BA8B68700D4AB2E /* HomeViewController.xib */; };
+		54B97C0C2BA8C34400D4AB2E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B97C0B2BA8C34400D4AB2E /* LocationManager.swift */; };
+		54B97C0E2BA8CEE200D4AB2E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B97C0D2BA8CEE200D4AB2E /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		54B97BE22BA89D9900D4AB2E /* Supertal Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Supertal Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54B97BE52BA89D9900D4AB2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		54B97BE92BA89D9900D4AB2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		54B97BEC2BA89D9900D4AB2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54B97BEE2BA89D9A00D4AB2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54B97BF12BA89D9A00D4AB2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54B97BF32BA89D9A00D4AB2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +34,8 @@
 		54B97BFF2BA89F6400D4AB2E /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		54B97C062BA8B68700D4AB2E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		54B97C072BA8B68700D4AB2E /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		54B97C0B2BA8C34400D4AB2E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		54B97C0D2BA8CEE200D4AB2E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +70,6 @@
 			children = (
 				54B97BF92BA89F3B00D4AB2E /* Resources */,
 				54B97BE52BA89D9900D4AB2E /* AppDelegate.swift */,
-				54B97BE92BA89D9900D4AB2E /* ViewController.swift */,
-				54B97BEB2BA89D9900D4AB2E /* Main.storyboard */,
 				54B97BEE2BA89D9A00D4AB2E /* Assets.xcassets */,
 				54B97BF02BA89D9A00D4AB2E /* LaunchScreen.storyboard */,
 				54B97BF32BA89D9A00D4AB2E /* Info.plist */,
@@ -82,6 +80,7 @@
 		54B97BF92BA89F3B00D4AB2E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				54B97C0A2BA8C33300D4AB2E /* Helpers */,
 				54B97C052BA8B66B00D4AB2E /* Controllers */,
 				54B97BFA2BA89F4400D4AB2E /* Fonts */,
 			);
@@ -107,6 +106,15 @@
 				54B97C072BA8B68700D4AB2E /* HomeViewController.xib */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		54B97C0A2BA8C33300D4AB2E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				54B97C0B2BA8C34400D4AB2E /* LocationManager.swift */,
+				54B97C0D2BA8CEE200D4AB2E /* NetworkManager.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,7 +181,6 @@
 				54B97BEF2BA89D9A00D4AB2E /* Assets.xcassets in Resources */,
 				54B97C012BA89F6400D4AB2E /* Roboto-Regular.ttf in Resources */,
 				54B97C002BA89F6400D4AB2E /* Roboto-Light.ttf in Resources */,
-				54B97BED2BA89D9900D4AB2E /* Main.storyboard in Resources */,
 				54B97C022BA89F6400D4AB2E /* Roboto-Black.ttf in Resources */,
 				54B97C092BA8B68700D4AB2E /* HomeViewController.xib in Resources */,
 			);
@@ -186,23 +193,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54B97BEA2BA89D9900D4AB2E /* ViewController.swift in Sources */,
+				54B97C0E2BA8CEE200D4AB2E /* NetworkManager.swift in Sources */,
 				54B97BE62BA89D9900D4AB2E /* AppDelegate.swift in Sources */,
 				54B97C082BA8B68700D4AB2E /* HomeViewController.swift in Sources */,
+				54B97C0C2BA8C34400D4AB2E /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		54B97BEB2BA89D9900D4AB2E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				54B97BEC2BA89D9900D4AB2E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		54B97BF02BA89D9A00D4AB2E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -346,7 +346,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14;
@@ -379,7 +379,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14;
