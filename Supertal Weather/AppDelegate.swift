@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func configureApp() {
         let homevc = HomeViewController(viewModel: .init(screenName: "Home", 
-                                                         locationManager: SuperTalLocationManager()))
+                                                         locationManager: SuperTalLocationManager(),
+                                                         networkManager: NetworkManager()))
         let navigationVC = UINavigationController(rootViewController: homevc)
         guard let window  else { 
             window = UIWindow()

@@ -7,16 +7,144 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FAB58081-00FA-4F00-9D95-3DDD07C95384"
+            uuid = "95603ABE-C45D-481E-BE42-94D84CBE10EA"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Supertal Weather/Resources/Controllers/HomeViewController.swift"
+            filePath = "Supertal Weather/Resources/Controllers/CustomForecastViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "setupView()"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "onClickFetch(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2CD220B7-E368-41AF-935D-872D4241FF7D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Supertal Weather/Resources/Controllers/CustomForecastViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "fetchData(latitude:longitude:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2CD220B7-E368-41AF-935D-872D4241FF7D - 492078fc1827e6c5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Supertal_Weather.CustomForecastViewModel.fetchData(latitude: Swift.String, longitude: Swift.String) -&gt; ()"
+                  moduleName = "Supertal Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aqibjaved/Documents/lance/Supertal%20Weather/Supertal%20Weather/Resources/Controllers/CustomForecastViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "512">
+               </Location>
+               <Location
+                  uuid = "2CD220B7-E368-41AF-935D-872D4241FF7D - 492078fc1827e6c5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Supertal_Weather.CustomForecastViewModel.fetchData(latitude: Swift.String, longitude: Swift.String) -&gt; ()"
+                  moduleName = "Supertal Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aqibjaved/Documents/lance/Supertal%20Weather/Supertal%20Weather/Resources/Controllers/CustomForecastViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8B3A5FD6-3A47-4C49-B661-0F03C481CFC1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Supertal Weather/Resources/Controllers/CustomForecastViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "fetchData(latitude:longitude:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8B3A5FD6-3A47-4C49-B661-0F03C481CFC1 - f0d992312ebcf39e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Supertal_Weather.CustomForecastViewModel.fetchData(latitude: Swift.String, longitude: Swift.String) -&gt; ()"
+                  moduleName = "Supertal Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aqibjaved/Documents/lance/Supertal%20Weather/Supertal%20Weather/Resources/Controllers/CustomForecastViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "308">
+               </Location>
+               <Location
+                  uuid = "8B3A5FD6-3A47-4C49-B661-0F03C481CFC1 - f0d992312ebcf358"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Supertal_Weather.CustomForecastViewModel.fetchData(latitude: Swift.String, longitude: Swift.String) -&gt; ()"
+                  moduleName = "Supertal Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aqibjaved/Documents/lance/Supertal%20Weather/Supertal%20Weather/Resources/Controllers/CustomForecastViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "196">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F7182E4A-A9A4-4811-B0BB-48C8911BA3C6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Supertal Weather/Resources/Models/Forecast.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "computedSpeed"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "790AA57D-8411-4FD4-A28E-16E1BB728AF7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Supertal Weather/Resources/Models/Forecast.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "init(from:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

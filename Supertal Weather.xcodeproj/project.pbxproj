@@ -19,6 +19,10 @@
 		54B97C092BA8B68700D4AB2E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54B97C072BA8B68700D4AB2E /* HomeViewController.xib */; };
 		54B97C0C2BA8C34400D4AB2E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B97C0B2BA8C34400D4AB2E /* LocationManager.swift */; };
 		54B97C0E2BA8CEE200D4AB2E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B97C0D2BA8CEE200D4AB2E /* NetworkManager.swift */; };
+		54B97C172BAA249C00D4AB2E /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B97C102BAA249C00D4AB2E /* Forecast.swift */; };
+		54B97C202BAB482500D4AB2E /* CustomForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B97C1E2BAB482500D4AB2E /* CustomForecastViewController.swift */; };
+		54B97C212BAB482500D4AB2E /* CustomForecastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54B97C1F2BAB482500D4AB2E /* CustomForecastViewController.xib */; };
+		54B97C232BAB4FD300D4AB2E /* viewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B97C222BAB4FD300D4AB2E /* viewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		54B97C072BA8B68700D4AB2E /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		54B97C0B2BA8C34400D4AB2E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		54B97C0D2BA8CEE200D4AB2E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		54B97C102BAA249C00D4AB2E /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		54B97C1E2BAB482500D4AB2E /* CustomForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomForecastViewController.swift; sourceTree = "<group>"; };
+		54B97C1F2BAB482500D4AB2E /* CustomForecastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomForecastViewController.xib; sourceTree = "<group>"; };
+		54B97C222BAB4FD300D4AB2E /* viewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,7 @@
 		54B97BF92BA89F3B00D4AB2E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				54B97C0F2BAA249200D4AB2E /* Models */,
 				54B97C0A2BA8C33300D4AB2E /* Helpers */,
 				54B97C052BA8B66B00D4AB2E /* Controllers */,
 				54B97BFA2BA89F4400D4AB2E /* Fonts */,
@@ -104,6 +113,8 @@
 			children = (
 				54B97C062BA8B68700D4AB2E /* HomeViewController.swift */,
 				54B97C072BA8B68700D4AB2E /* HomeViewController.xib */,
+				54B97C1E2BAB482500D4AB2E /* CustomForecastViewController.swift */,
+				54B97C1F2BAB482500D4AB2E /* CustomForecastViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -113,8 +124,17 @@
 			children = (
 				54B97C0B2BA8C34400D4AB2E /* LocationManager.swift */,
 				54B97C0D2BA8CEE200D4AB2E /* NetworkManager.swift */,
+				54B97C222BAB4FD300D4AB2E /* viewExtensions.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		54B97C0F2BAA249200D4AB2E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				54B97C102BAA249C00D4AB2E /* Forecast.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +202,7 @@
 				54B97C012BA89F6400D4AB2E /* Roboto-Regular.ttf in Resources */,
 				54B97C002BA89F6400D4AB2E /* Roboto-Light.ttf in Resources */,
 				54B97C022BA89F6400D4AB2E /* Roboto-Black.ttf in Resources */,
+				54B97C212BAB482500D4AB2E /* CustomForecastViewController.xib in Resources */,
 				54B97C092BA8B68700D4AB2E /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,7 +216,10 @@
 			files = (
 				54B97C0E2BA8CEE200D4AB2E /* NetworkManager.swift in Sources */,
 				54B97BE62BA89D9900D4AB2E /* AppDelegate.swift in Sources */,
+				54B97C202BAB482500D4AB2E /* CustomForecastViewController.swift in Sources */,
 				54B97C082BA8B68700D4AB2E /* HomeViewController.swift in Sources */,
+				54B97C232BAB4FD300D4AB2E /* viewExtensions.swift in Sources */,
+				54B97C172BAA249C00D4AB2E /* Forecast.swift in Sources */,
 				54B97C0C2BA8C34400D4AB2E /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
