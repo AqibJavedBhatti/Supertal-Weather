@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54310E0F2BAC169D0062ED60 /* textfieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54310E0E2BAC169D0062ED60 /* textfieldExtension.swift */; };
 		54B97BE62BA89D9900D4AB2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B97BE52BA89D9900D4AB2E /* AppDelegate.swift */; };
 		54B97BEF2BA89D9A00D4AB2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B97BEE2BA89D9A00D4AB2E /* Assets.xcassets */; };
 		54B97BF22BA89D9A00D4AB2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B97BF02BA89D9A00D4AB2E /* LaunchScreen.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54310E0E2BAC169D0062ED60 /* textfieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textfieldExtension.swift; sourceTree = "<group>"; };
 		54B97BE22BA89D9900D4AB2E /* Supertal Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Supertal Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54B97BE52BA89D9900D4AB2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54B97BEE2BA89D9A00D4AB2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				54B97C0B2BA8C34400D4AB2E /* LocationManager.swift */,
 				54B97C0D2BA8CEE200D4AB2E /* NetworkManager.swift */,
 				54B97C222BAB4FD300D4AB2E /* viewExtensions.swift */,
+				54310E0E2BAC169D0062ED60 /* textfieldExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54B97C0E2BA8CEE200D4AB2E /* NetworkManager.swift in Sources */,
+				54310E0F2BAC169D0062ED60 /* textfieldExtension.swift in Sources */,
 				54B97BE62BA89D9900D4AB2E /* AppDelegate.swift in Sources */,
 				54B97C202BAB482500D4AB2E /* CustomForecastViewController.swift in Sources */,
 				54B97C082BA8B68700D4AB2E /* HomeViewController.swift in Sources */,

@@ -12,6 +12,7 @@ import CoreLocation
 class SuperTalLocationManager: NSObject {
     let manager: CLLocationManager
     var actionOnUpdate: ((CLLocation)->Void)?
+    var changeStatus: ((CLAuthorizationStatus)->Void)?
     private var lastLocation: CLLocation? {
         get {
             guard let latitude = UserDefaults.standard.string(forKey: "LastLatitude"),
@@ -35,10 +36,15 @@ class SuperTalLocationManager: NSObject {
     public func getLocationAccess() {
         DispatchQueue.global().async { [weak self] in
             guard let self else { return }
-            if CLLocationManager.locationServicesEnabled() {
+            let status = CLLocationManager.authorizationStatus()
+            if CLLocationManager.locationServicesEnabled() && status == .notDetermined {
                 manager.delegate = self
                 manager.requestWhenInUseAuthorization()
                 manager.startUpdatingLocation()
+            } else if status == .authorizedAlways || status == .authorizedWhenInUse {
+                manager.startUpdatingLocation()
+            } else {
+                self.changeStatus?(.denied)
             }
         }
     }
@@ -60,6 +66,7 @@ extension SuperTalLocationManager: CLLocationManagerDelegate {
         case .restricted:
             print("restricted")
         case .denied:
+            self.changeStatus?(.denied)
             print("not authorized")
         case .authorizedWhenInUse, .authorizedAlways:
             manager.startUpdatingLocation()

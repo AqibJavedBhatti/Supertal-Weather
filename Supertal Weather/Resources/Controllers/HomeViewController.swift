@@ -13,6 +13,7 @@ protocol HomeViewModelDelegate {
     func presentError(error: Error)
     func reloadData(forecast: Forecast)
     func openCustomForecast(controller: UIViewController)
+    func configureErrorView()
 }
 
 class HomeViewModel {
@@ -42,6 +43,15 @@ class HomeViewModel {
             self.location = location
             DispatchQueue.global().async {
                 self.delegate?.locationFetched()
+            }
+        }
+        
+        locationManager.changeStatus = { status in
+            switch status {
+            case .denied:
+                self.delegate?.configureErrorView()
+            default:
+                print("everything looks good")
             }
         }
     }
@@ -154,14 +164,14 @@ class HomeViewController: UIViewController {
     private func setupEmptyView() {
         title = "No data, Try refreshing ->"
         emptyView.isHidden = true
-        sunriselabel.text    = "Loading..."
-        sunsetlabel.text     = "Loading..."
-        humiditylabel.text   = "Loading..."
-        cloudylabel.text     = "Loading..."
-        windlabel.text       = "Loading..."
-        conditionlabel.text  = "Loading..."
-        citylabel.text       = "Loading..."
-        timezonelabel.text   = "Loading..."
+        [sunriselabel  ,
+         sunsetlabel   ,
+         humiditylabel ,
+         cloudylabel   ,
+         windlabel     ,
+         conditionlabel,
+         citylabel     ,
+         timezonelabel ].forEach { $0.text = "Loading..." }
         tempLabel.text = "--"
     }
     
@@ -185,24 +195,40 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: HomeViewModelDelegate {
     func openCustomForecast(controller: UIViewController) {
-        self.navigationController?.pushViewController(controller, animated: true)
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     func presentError(error: Error) {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self else {return}
             let alert = UIAlertController(title: "Error", message: "Due to some technical Reasons we are unable to load weater data", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default))
-            self.present(alert, animated: true)
+            present(alert, animated: true)
+            spinner.removeFromSuperview()
         }
     }
     
     func reloadData(forecast: Forecast) {
-        DispatchQueue.main.async {
-            self.setupData(with: self.viewModel)
+        DispatchQueue.main.async { [weak self] in
+            guard let self else {return}
+            setupData(with: self.viewModel)
         }
     }
     
     func locationFetched() {
-        viewModel.getWeather()
+        DispatchQueue.main.async { [weak self] in
+            guard let self else {return}
+            viewModel.getWeather()
+        }
+    }
+    
+    func configureErrorView() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self else {return}
+            emptyView.isHidden = false
+            emptyDescription.text = "we are unable to fetch your location kindly go to settings and allow app to use location"
+            spinner.removeFromSuperview()
+        }
+        
     }
 }

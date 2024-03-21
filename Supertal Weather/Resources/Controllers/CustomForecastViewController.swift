@@ -73,6 +73,19 @@ class CustomForecastViewController: UIViewController {
     @IBOutlet weak var longitudeTextField: UITextField!
     @IBOutlet weak var tempLabel: UILabel!
     
+    @IBOutlet weak var sunriselabel: UILabel!
+    @IBOutlet weak var sunsetlabel: UILabel!
+    @IBOutlet weak var humiditylabel: UILabel!
+    @IBOutlet weak var cloudylabel: UILabel!
+    @IBOutlet weak var windlabel: UILabel!
+    @IBOutlet weak var conditionlabel: UILabel!
+    @IBOutlet weak var citylabel: UILabel!
+    @IBOutlet weak var timezonelabel: UILabel!
+    
+    @IBOutlet weak var detailsView: UIView!
+    
+    let spinner = UIActivityIndicatorView(style: .large)
+    
     init(viewModel: CustomForecastViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -93,10 +106,32 @@ class CustomForecastViewController: UIViewController {
         viewModel.delegate = self
         latitudeTextField.delegate = self
         longitudeTextField.delegate = self
+        detailsView.isHidden = true
+    }
+    
+    private func setupEmptyView() {
+        
+        [sunriselabel  ,
+         sunsetlabel   ,
+         humiditylabel ,
+         cloudylabel   ,
+         windlabel     ,
+         conditionlabel,
+         citylabel     ,
+         timezonelabel ].forEach { $0.text = "Loading..." }
+        tempLabel.text = "--"
+        
+        spinner.removeFromSuperview()
+        title = "No data found"
     }
     
     @IBAction func onClickFetch(_ sender: UIButton) {
         viewModel.fetchData(latitude: latitudeTextField.text ?? "", longitude: longitudeTextField.text ?? "")
+        spinner.translatesAutoresizingMaskIntoConstraints = false
+        spinner.startAnimating()
+        view.addSubview(spinner)
+        spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
 }
 
@@ -126,12 +161,20 @@ extension CustomForecastViewController: CustomForecastViewModelDelegate {
             setupEmptyView()
             return
         }
+        detailsView.isHidden = false
         title = data.name ?? ""
         tempLabel.text = data.main?.celciusTemp
-    }
-    
-    private func setupEmptyView() {
-        title = "No data found"
+        
+        sunriselabel.text    = data.sys?.computedSunrise
+        sunsetlabel.text     = data.sys?.computedSunset
+        humiditylabel.text   = "\(data.main?.humidity ?? 0)%"
+        cloudylabel.text     = "\(data.clouds?.all ?? 0)%"
+        windlabel.text       = "\(data.wind?.computedSpeed ?? "") km/h at \(data.wind?.deg ?? 0)°"
+        conditionlabel.text  = "\(data.computedWeather?.description ?? "")"
+        citylabel.text       = data.name
+        timezonelabel.text   = "GMT \(Float(data.timezone ?? 1) / 3600)"
+        
+        spinner.removeFromSuperview()
     }
 }
 
